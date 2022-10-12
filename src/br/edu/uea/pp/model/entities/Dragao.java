@@ -1,4 +1,5 @@
 package br.edu.uea.pp.model.entities;
+
 import br.edu.uea.pp.model.ComportamentoFeroz;
 
 public class Dragao extends Personagem implements ComportamentoFeroz{

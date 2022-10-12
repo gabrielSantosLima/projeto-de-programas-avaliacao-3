@@ -1,4 +1,5 @@
 package br.edu.uea.pp.model.entities;
+
 import br.edu.uea.pp.model.ComportamentoMagico;
 
 public class Mago extends Personagem implements ComportamentoMagico{
