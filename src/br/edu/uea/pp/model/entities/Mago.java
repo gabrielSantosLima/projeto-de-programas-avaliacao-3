@@ -8,23 +8,19 @@ public class Mago extends Personagem implements ComportamentoMagico{
 		super(nome);
 	}
 
-	@Override
 	public void invisibilidade() {
+		System.out.println(this.getNome() + " está invisivel");
 	}
 
-	@Override
 	public void ultraRapidez() {
 	}
 
-	@Override
 	public void andar() {
 	}
 
-	@Override
 	public void guardarItem() {
 	}
 
-	@Override
 	public void usarItem() {
 	}
 }
