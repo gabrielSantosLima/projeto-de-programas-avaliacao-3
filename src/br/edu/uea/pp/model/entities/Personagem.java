@@ -6,10 +6,21 @@ import br.edu.uea.pp.model.ComportamentoNormal;
 public abstract class Personagem implements ComportamentoNormal  { 
 	
 	private String nome;
+	private Integer vida;
 	
-	public Personagem(String nome){
+	public Personagem(String nome, Integer vida){
 		this.nome = nome;
+		this.vida = vida;
 	}
+	
+	public Integer getVida() {
+		return vida;
+	}
+
+	public void setVida(Integer vida) {
+		this.vida = vida;
+	}
+
 	
 	public String getNome() {
 		return nome;
@@ -18,4 +29,7 @@ public abstract class Personagem implements ComportamentoNormal  {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
+	public abstract void recebeDano(Integer dano);
+	
 }

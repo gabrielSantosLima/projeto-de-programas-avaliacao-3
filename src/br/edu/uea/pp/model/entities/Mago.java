@@ -4,8 +4,8 @@ import br.edu.uea.pp.model.ComportamentoMagico;
 
 public class Mago extends Personagem implements ComportamentoMagico{
 
-	public Mago(String nome) {
-		super(nome);
+	public Mago(String nome, Integer vida) {
+		super(nome, vida);
 	}
 
 	public void invisibilidade() {
@@ -22,5 +22,23 @@ public class Mago extends Personagem implements ComportamentoMagico{
 	}
 
 	public void usarItem() {
+	}
+
+	@Override
+	public void guardarItem(Item item) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void usarItem(Item item) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void recebeDano(Integer dano) {
+		// TODO Auto-generated method stub
+		
 	}
 }

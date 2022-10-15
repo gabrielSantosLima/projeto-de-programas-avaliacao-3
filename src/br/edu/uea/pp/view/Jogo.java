@@ -10,8 +10,8 @@ public class Jogo {
 		// Executa as ações comuns para cada personagem. Iteração utilizando streaming de listas
 		personagens.stream().forEach(personagem -> {
 			personagem.andar();
-			personagem.guardarItem();
-			personagem.usarItem();
+			//personagem.guardarItem();
+			//personagem.usarItem();
 		});
 	}
 }
