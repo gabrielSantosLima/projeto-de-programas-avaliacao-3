@@ -1,5 +1,8 @@
 package br.edu.uea.pp.model.entities;
 
+import java.awt.Color;
+import java.awt.Graphics;
+
 import br.edu.uea.pp.model.ComportamentoFeroz;
 
 public class Dragao extends Personagem implements ComportamentoFeroz{
@@ -40,5 +43,11 @@ public class Dragao extends Personagem implements ComportamentoFeroz{
 	public void recebeDano(Integer dano) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public void draw(Graphics g) {
+		g.setColor(Color.RED);
+		g.fillRect(10, 10, 10, 10);
 	}
 }

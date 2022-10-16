@@ -14,7 +14,7 @@ public class Principal {
 		((Mago)p).invisibilidade(); //Questão 3.c
 
 		
-		Jogo jogo = new Jogo();
+		Jogo jogo = new Jogo(new Configuration());
 		List<Personagem> personagens = new ArrayList<>();
 		personagens.add(new Cavaleiro("Robin", 100)); // Questão 3.a
 		personagens.add(new Cavaleiro("Sir Magnus", 100));
@@ -23,6 +23,7 @@ public class Principal {
 		personagens.add(new Dragao("Fenrir", 100));
 		personagens.add(new Dragao("Viktor", 100));
 		jogo.ControlarAcoesDosPersonagens(personagens); // Questão 3.b
-
+		
+		jogo.run(personagens);
 	}
 }

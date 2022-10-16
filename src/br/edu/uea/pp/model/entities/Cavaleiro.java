@@ -1,5 +1,7 @@
 package br.edu.uea.pp.model.entities;
 
+import java.awt.Color;
+import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,6 +56,12 @@ public class Cavaleiro extends Personagem implements ComportamentoHeroico {
 	public void recebeDano(Integer dano) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public void draw(Graphics g) {
+		g.setColor(Color.YELLOW);
+		g.fillRect(10, 20, 10, 10);
 	}
 
 

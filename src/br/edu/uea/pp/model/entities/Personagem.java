@@ -1,12 +1,17 @@
 package br.edu.uea.pp.model.entities;
 
 import br.edu.uea.pp.model.ComportamentoNormal;
+import br.edu.uea.pp.model.Desenhavel;
 
 //Questão 2.b. Classe "Personagem" do tipo abstrato pois não deve ser instanciada.
-public abstract class Personagem implements ComportamentoNormal  { 
+public abstract class Personagem implements ComportamentoNormal, Desenhavel  { 
 	
 	private String nome;
 	private Integer vida;
+	private int x;
+	private int y;
+	private int width;
+	private int height;
 	
 	public Personagem(String nome, Integer vida){
 		this.nome = nome;

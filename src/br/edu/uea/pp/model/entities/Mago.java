@@ -1,5 +1,8 @@
 package br.edu.uea.pp.model.entities;
 
+import java.awt.Color;
+import java.awt.Graphics;
+
 import br.edu.uea.pp.model.ComportamentoMagico;
 
 public class Mago extends Personagem implements ComportamentoMagico{
@@ -40,5 +43,11 @@ public class Mago extends Personagem implements ComportamentoMagico{
 	public void recebeDano(Integer dano) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public void draw(Graphics g) {
+		g.setColor(Color.BLUE);
+		g.fillRect(10, 30, 10, 10);
 	}
 }
