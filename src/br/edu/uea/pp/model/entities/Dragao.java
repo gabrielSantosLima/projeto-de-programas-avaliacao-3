@@ -10,35 +10,36 @@ public class Dragao extends Personagem implements ComportamentoFeroz{
 
 	@Override
 	public void atirarFogo() {
+		System.out.println("[Dragão] "+this.getNome() + " atirou fogo.");
 	}
 
 	@Override
 	public void voar() {
+		System.out.println("[Dragão] "+this.getNome() + " voôu para longe.");
 	}
 
 	@Override
 	public void morder() {
+		System.out.println("[Dragão] "+this.getNome() + " mordeu com voracidade.");
 	}
 
 	@Override
 	public void andar() {
+		System.out.println("[Dragão] "+this.getNome() + " andou.");
 	}
 
 	@Override
 	public void guardarItem(Item item) {
-		// TODO Auto-generated method stub
-		
+		System.out.println("[Dragão] "+this.getNome() + " guardou " + item.getNome()+ ".");
 	}
 
 	@Override
 	public void usarItem(Item item) {
-		// TODO Auto-generated method stub
-		
+		System.out.println("[Dragão] "+this.getNome() + " usou " + item.getNome() + ".");
 	}
 
 	@Override
-	public void recebeDano(Integer dano) {
-		// TODO Auto-generated method stub
-		
+	public void recebeDano(int dano) {
+		System.out.println("[Dragão] "+this.getNome() + " recebeu um dano de -" + dano + "HP.");
 	}
 }

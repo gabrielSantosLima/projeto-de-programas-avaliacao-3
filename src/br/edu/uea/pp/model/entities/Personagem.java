@@ -30,6 +30,13 @@ public abstract class Personagem implements ComportamentoNormal  {
 		this.nome = nome;
 	}
 	
-	public abstract void recebeDano(Integer dano);
+	public void recebeDano(int dano) {
+		this.vida -= dano;
+	};
+	
+	@Override
+	public String toString() {
+		return getNome() + " está com " + getVida() + " de HP";
+	}
 	
 }
