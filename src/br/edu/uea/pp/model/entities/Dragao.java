@@ -33,7 +33,7 @@ public class Dragao extends Personagem implements ComportamentoFeroz{
 
 	@Override
 	public void morder(Personagem inimigo) {
-		System.out.println(this.showNome("Dragão")+this.getNome() + " mordeu =" + inimigo.getNome()+ " com voracidade.");
+		System.out.println(this.showNome("Dragão")+this.getNome() + " mordeu " + inimigo.getNome()+ " com voracidade.");
 		inimigo.recebeDano(40);
 		this.setFlying(false);
 	}

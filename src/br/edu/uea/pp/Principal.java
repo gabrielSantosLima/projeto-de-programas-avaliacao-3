@@ -11,7 +11,7 @@ import br.edu.uea.pp.view.Jogo;
 public class Principal {
 	public static void main(String[] args) {
 		
-		int rodadas = 5;
+		int rodadas = 7;
 		int rodadaAtual = 0;
 		Personagem mago = new Mago("Mago", 100);
 		((Mago)mago).invisibilidade(); //Questão 3.c
@@ -38,6 +38,27 @@ public class Principal {
 					.filter(personagem -> personagem.getVida() > 1)
 					.collect(Collectors.toList()); // Verifica personagens que estão com vida maior que 0.
 			rodadaAtual++;
+		}
+		
+		showWinner(personagens);
+		
+		
+	}
+	
+	public static void showWinner(List<Personagem> personagens) {
+
+		System.out.println("\n===== FIM DA PARTIDA =======\n");
+		if(personagens.size() > 1)
+		{
+			personagens.forEach(personagem ->{
+				System.out.println(" " + personagem.getNome()+ " ");
+			});
+			
+			System.out.println(" são declarados vencedores da batalha!");
+		}
+		else
+		{
+			System.out.println(personagens.get(0).getNome()+ ", menos ferido que seus inimigos, é declarado o vencedor da batalha!");
 		}
 		
 	}
