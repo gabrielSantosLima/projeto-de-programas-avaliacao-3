@@ -33,13 +33,17 @@ public class Jogo {
 			personagem.andar();
 			personagem.guardarItem(item);
 			personagem.usarItem(item);
+			Personagem atacado = sortearPersonagem(personagens);
 			
 			if(personagem instanceof Dragao) {
 				int acao = sortearNumero(3);
 				Dragao dragao = (Dragao) personagem;
 				
 				if(acao == 0) dragao.atirarFogo(); // Escolhe ações aleatórias para um dragão.
-				else if(acao == 1) dragao.morder();
+				else if(acao == 1) {
+					if(atacado.getNome() == dragao.getNome()) atacado = sortearPersonagem(personagens);
+					dragao.morder(atacado);
+				}
 				else dragao.voar();
 				
 			}else if(personagem instanceof Mago) {
@@ -47,14 +51,15 @@ public class Jogo {
 				Mago mago = (Mago) personagem;
 				
 				if(acao == 0) mago.invisibilidade(); // Escolhe ações aleatórias para um mago.
-				else mago.ultraRapidez();
+				if(atacado.getNome() == mago.getNome()) atacado = sortearPersonagem(personagens);
+				else mago.ultraRapidez(atacado);
 				
 			}else if(personagem instanceof Cavaleiro) {
 				int acao = sortearNumero(3);
 				Cavaleiro cavaleiro = (Cavaleiro) personagem;
 				
 				if(acao == 0) { // Escolhe ações aleatórias para um cavaleiro.
-					Personagem atacado = sortearPersonagem(personagens);
+					if(atacado.getNome() == cavaleiro.getNome()) atacado = sortearPersonagem(personagens);
 					cavaleiro.atacar(item, atacado);
 				}
 				else if(acao == 1) cavaleiro.defender();

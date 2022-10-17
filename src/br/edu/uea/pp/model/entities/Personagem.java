@@ -36,7 +36,19 @@ public abstract class Personagem implements ComportamentoNormal  {
 	
 	@Override
 	public String toString() {
-		return getNome() + " está com " + getVida() + " de HP";
+		if(this.getVida() <= 0) {
+			return getNome() + " não suporta mais a dor de seus ferimentos e acaba morto!\n";
+		}
+		return getNome() + " está com " + getVida() + " de HP\n";
+	}
+	
+	public String showNome(String nome)
+	{
+		if(this.getVida() <= 30)
+		{
+			return "["+ nome+ " ferido] ";
+		}
+		return "[" + nome + "] ";
 	}
 	
 }

@@ -11,7 +11,7 @@ import br.edu.uea.pp.view.Jogo;
 public class Principal {
 	public static void main(String[] args) {
 		
-		int rodadas = 4;
+		int rodadas = 5;
 		int rodadaAtual = 0;
 		Personagem mago = new Mago("Mago", 100);
 		((Mago)mago).invisibilidade(); //Questão 3.c
@@ -19,12 +19,12 @@ public class Principal {
 		
 		Jogo jogo = new Jogo();
 		List<Personagem> personagens = new ArrayList<>();
-		personagens.add(new Cavaleiro("Robin", 100)); // Questão 3.a
-		personagens.add(new Mago("Ozzy", 100));
+		personagens.add(new Cavaleiro("Sir Robin", 100)); // Questão 3.a
+		personagens.add(new Mago("Octus", 100));
 		personagens.add(new Dragao("Fenrir", 100));
 		personagens.add(new Cavaleiro("Sir Magnus", 100));
-		personagens.add(new Mago("Dumbledore", 100));
-		personagens.add(new Dragao("Viktor", 100));
+		personagens.add(new Mago("Rubert", 100));
+		personagens.add(new Dragao("Dracarys", 100));
 		
 		List<Item> itens = new ArrayList<>(); // Adiciona lista de itens aos jogadores
 		itens.add(new Item("Pedra filosofal", 100));
@@ -35,7 +35,7 @@ public class Principal {
 			System.out.println("\n========= RODADA "+ (rodadaAtual + 1) +" =========");
 			jogo.ControlarAcoesDosPersonagens(personagens, itens); // Questão 3.b
 			personagens = personagens.stream()
-					.filter(personagem -> personagem.getVida() > 0)
+					.filter(personagem -> personagem.getVida() > 1)
 					.collect(Collectors.toList()); // Verifica personagens que estão com vida maior que 0.
 			rodadaAtual++;
 		}
